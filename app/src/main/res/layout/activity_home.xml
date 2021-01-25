@@ -8,34 +8,36 @@
     android:background="?attr/colorOnPrimary">
 
     <Button
-        android:id="@+id/homeButtonEntree"
+        android:id="@+id/homeEntree"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="200dp"
         android:text="@string/entree"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/homeToolbar"
+
+        />
 
     <Button
-        android:id="@+id/homeButtonPlat"
+        android:id="@+id/homePlat"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:text="@string/plat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeButtonEntree" />
+        app:layout_constraintTop_toBottomOf="@+id/homeEntree" />
 
     <Button
-        android:id="@+id/homeButtonDessert"
+        android:id="@+id/homeDessert"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:text="@string/dessert"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeButtonPlat" />
+        app:layout_constraintTop_toBottomOf="@+id/homePlat" />
 
 
     <TextView
@@ -44,9 +46,11 @@
         android:layout_height="125dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
         android:text="@string/bienvenue_chez_healthy_nation"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
+        android:typeface="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
 

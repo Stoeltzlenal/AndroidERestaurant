@@ -8,7 +8,7 @@
     android:background="?attr/colorOnPrimary">
 
     <Button
-        android:id="@+id/homeEntree"
+        android:id="@+id/starter"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
@@ -20,24 +20,24 @@
         />
 
     <Button
-        android:id="@+id/homePlat"
+        android:id="@+id/main"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:text="@string/plat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeEntree" />
+        app:layout_constraintTop_toBottomOf="@+id/starter" />
 
     <Button
-        android:id="@+id/homeDessert"
+        android:id="@+id/dessert"
         android:layout_width="263dp"
         android:layout_height="47dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:text="@string/dessert"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homePlat" />
+        app:layout_constraintTop_toBottomOf="@+id/main" />
 
 
     <TextView

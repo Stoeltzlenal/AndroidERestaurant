@@ -14,22 +14,21 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.homeEntree.setOnClickListener{
+        binding.starter.setOnClickListener{
             val intent = Intent ( this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.HOMEENTREE)
+            intent.putExtra(CATEGORY_NAME, ItemType.STARTER)
             startActivity(intent)
         }
 
-        binding.homePlat.setOnClickListener {
-            val intent = Intent (  this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.HOMEPLAT)
+        binding.main.setOnClickListener {
+            val intent = Intent (this, CategoryActivity::class.java)
+            intent.putExtra(CATEGORY_NAME, ItemType.MAIN)
             startActivity(intent)
-
         }
 
-        binding.homeDessert.setOnClickListener{
+        binding.dessert.setOnClickListener{
             val intent = Intent ( this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.HOMEDESSERT)
+            intent.putExtra(CATEGORY_NAME, ItemType.DESSERT)
             startActivity(intent)
         }
     }

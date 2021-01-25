@@ -4,9 +4,9 @@ import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 enum class ItemType{
-    HOMEENTREE,
-    HOMEPLAT,
-    HOMEDESSERT
+    STARTER,
+    MAIN,
+    DESSERT
 }
 class CategoryActivity : AppCompatActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {

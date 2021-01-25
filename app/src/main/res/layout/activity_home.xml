@@ -4,58 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="?attr/colorOnPrimary">
 
     <Button
         android:id="@+id/homeButtonEntree"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="92dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="94dp"
-        android:background="#EA0000"
+        android:layout_width="263dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="200dp"
         android:text="@string/entree"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
 
     <Button
         android:id="@+id/homeButtonPlat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="21dp"
+        android:layout_width="263dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
         android:text="@string/plat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeButtonEntree" />
 
     <Button
         android:id="@+id/homeButtonDessert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="263dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
         android:text="@string/dessert"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeButtonPlat" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="334dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/bienvenue_chez_healthy_nation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/homeToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#D52F2F"
+        android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <TextView
-            android:id="@+id/homeToolbarTitle"
+            android:id="@+id/homeTextToolbar"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="?attr/colorOnPrimary"
             android:text="@string/healthy_nation"
+            android:textSize="24sp"
             />
 
     </androidx.appcompat.widget.Toolbar>

@@ -1,15 +1,20 @@
 package fr.isen.stoeltzlen.androiderestaurant
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.JsonReader
 import android.util.Log
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.gson.GsonBuilder
 
 import fr.isen.stoeltzlen.androiderestaurant.databinding.ActivityCategoryBinding
+import fr.isen.stoeltzlen.androiderestaurant.models.MenuResult
+import org.json.JSONObject
 
 enum class ItemType {
     STARTER, MAIN, DESSERT
@@ -93,22 +98,34 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun makeRequest() {
         val queue = Volley.newRequestQueue(this)
-        var url = "https://google.com"
-        var request = StringRequest(Request.Method.GET,
+        val jsondata= JSONObject()
+        jsondata.put("id_shop", 1)
+        val url = "http://test.api.catering.bluecodegames.com/menu"
+        val request = JsonObjectRequest(Request.Method.POST,
+            url,
+            jsondata,
+            { response ->
+                //success
+                val menu = GsonBuilder().create().fromJson(response.toString(), MenuResult::class.java)
+                menu.data.forEach{
+                    Log.d("Request", it.name)
+                }
+            },
+            { error ->
+                Log.d("Request", error.localizedMessage)
+            }
+        )
+        /*val request = StringRequest(Request.Method.GET,
             url,
             Response.Listener { response ->
                 //success
                 Log.d("Request", response)
-
             },
             Response.ErrorListener { error ->
                 //error
                 Log.d("Request", error.localizedMessage )
-
             }
-        )
+        )*/
         queue.add(request)
     }
-
-
 }

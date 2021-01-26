@@ -4,9 +4,9 @@
     <string name="plat">Plat</string>
     <string name="dessert">Dessert</string>
     <string name="entree">entree</string>
-    <string name="homeEntree"></string>
-    <string name="homePlat"></string>
-    <string name="homeDessert"></string>
+    <string name="starter">Entrées</string>
+    <string name="main">Plats</string>
+
     <string name="bienvenue_chez_healthy_nation">hhhhhh</string>
     <string name="string_healthy_nation" />
     <string name="tcocuicoui">Tcocuicoui</string>

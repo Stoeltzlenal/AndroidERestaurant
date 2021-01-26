@@ -26,9 +26,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.dessert.setOnClickListener{
+        binding.desserts.setOnClickListener{
             val intent = Intent ( this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.DESSERT)
+            intent.putExtra(CATEGORY_NAME, ItemType.DESSERTS)
             startActivity(intent)
         }
     }

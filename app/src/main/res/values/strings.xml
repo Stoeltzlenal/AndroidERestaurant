@@ -2,7 +2,7 @@
     <string name="app_name">AndroidERestaurant</string>
     <string name="healthy_nation">HEALTHY NATION</string>
     <string name="plat">Plat</string>
-    <string name="dessert">Dessert</string>
+    <string name="desserts">Desserts</string>
     <string name="entree">entree</string>
     <string name="starter">Entrées</string>
     <string name="main">Plats</string>

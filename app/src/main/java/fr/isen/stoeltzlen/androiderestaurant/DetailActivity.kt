@@ -9,6 +9,7 @@ import fr.isen.stoeltzlen.androiderestaurant.models.Item
 
 private lateinit var binding: ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

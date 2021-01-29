@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import fr.isen.stoeltzlen.androiderestaurant.databinding.DishesCellBinding
 import fr.isen.stoeltzlen.androiderestaurant.models.Item
+import fr.isen.stoeltzlen.androiderestaurant.R
 
 class CategoryAdapter(private val entries: List<Item>,
                       private val entryClickListener: (Item) -> Unit)

@@ -46,6 +46,10 @@ class CategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val selectedItem = intent.getSerializableExtra(HomeActivity.CATEGORY_NAME) as? ItemType
+        binding.swipeLayout.setOnRefreshListener {
+            resetCache()
+            makeRequest(selectedItem)
+        }
         binding.categoryTitle.text = getCategoryTitle(selectedItem)
 
         loadList(listOf<Item>())
@@ -96,10 +100,12 @@ class CategoryActivity : AppCompatActivity() {
                 url,
                 jsonData,
                 { response ->
+                    binding.swipeLayout.isRefreshing = false
                     cacheResult(response.toString())
                     parseResult(response.toString(), selectedItem)
                 },
                 { error ->
+                    binding.swipeLayout.isRefreshing = false
                     error.message?.let {
                         Log.d("request", it)
                     } ?: run {
@@ -115,6 +121,13 @@ class CategoryActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences(USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString(REQUEST_CACHE, response)
+        editor.apply()
+    }
+
+    private fun resetCache() {
+        val sharedPreferences = getSharedPreferences(USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.remove(REQUEST_CACHE)
         editor.apply()
     }
 

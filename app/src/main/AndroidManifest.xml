@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.isen.stoeltzlen.androiderestaurant" >
+    package="fr.isen.stoeltzlen.androiderestaurant">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidERestaurant"
-        android:usesCleartextTraffic="true" >
-        <activity android:name=".CategoryDetail" >
-        </activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".CategoryDetail"></activity>
         <activity android:name=".CategoryAdapter" />
         <activity android:name=".CategoryActivity" />
-        <activity android:name=".HomeActivity" >
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

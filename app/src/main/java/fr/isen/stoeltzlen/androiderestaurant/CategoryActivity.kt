@@ -2,6 +2,7 @@ package fr.isen.stoeltzlen.androiderestaurant
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Context
+import android.content.Intent
 import android.util.JsonReader
 import android.util.Log
 
@@ -57,6 +58,11 @@ class CategoryActivity : AppCompatActivity() {
         dishes?.let {
             val adapter = CategoryAdapter(it) { dish ->
                 //TODO afficher activité detail
+
+                val intent = Intent(this, DetailActivity::class.java)
+                intent.putExtra("dish", dish)
+                startActivity(intent)
+
                 Log.d("dish", "selected dish ${dish.name}")
             }
             binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -142,6 +148,5 @@ class CategoryActivity : AppCompatActivity() {
         const val USER_PREFERENCES_NAME = "USER_PREFERENCES_NAME"
         const val REQUEST_CACHE = "REQUEST_CACHE"
     }
-
 
 }

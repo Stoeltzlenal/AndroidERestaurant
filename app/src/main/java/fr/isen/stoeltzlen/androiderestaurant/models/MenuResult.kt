@@ -5,36 +5,35 @@ import java.io.Serializable
 
 class MenuResult (val data: List<Category>){}
 
-//Affiche les categories
-class Category (@SerializedName("name_fr") val name:String, val items:List<Item>){}
+//
+class Category (@SerializedName("name_fr") val name:String,
+                @SerializedName("items")val items:List<Item>){}
 
 
 class Item(
     @SerializedName("name_fr") val name: String,
-    val ingredients: List<Ingredient>,
-    val images: List<String>,
-    val prices: List<Price>
-) {
+    @SerializedName("ingredients") val ingredients: List<Ingredient>,
+    @SerializedName("images") val images: List<String>,
+    @SerializedName("prices") val prices: List<Price>
+): Serializable
+{
+
     fun getFirstPicture() = if (images.isNotEmpty() && images[0].isNotEmpty()) {
         images[0]
     } else {
         null
     }
 
-   /* fun getIngredient():String{
-        var str:String = "Liste des ingrédients :\n"
-        ingredients.forEach(action = {
-            str += it.name + ","
-        })
-
-        //return
-    }*/
-
+    fun getAllPictures() = if (images.isNotEmpty() && images.any { it.isNotEmpty() }) {
+        images.filter { it.isNotEmpty() }
+    } else {
+        null
+    }
 }
 
-class Ingredient (@SerializedName("name_fr") val name:String){}
+class Ingredient (@SerializedName("name_fr") val name:String):Serializable{}
 
-class Price (val price:String){}
+class Price (val price:String):Serializable{}
 
 class NetworkConstant {
 

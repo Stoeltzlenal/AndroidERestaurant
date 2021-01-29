@@ -16,6 +16,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val dish = intent.getSerializableExtra("dish") as Item
+        binding.ingredients1.text = dish.ingredients.map { it.name }.joinToString (" ,")
 
         dish.getAllPictures()?.let {
             binding.detailPager.adapter = DetailViewAdapter(this, it)

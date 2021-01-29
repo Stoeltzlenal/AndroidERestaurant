@@ -14,31 +14,27 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.starter.setOnClickListener{
-            val intent = Intent ( this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.STARTER)
-            startActivity(intent)
+        binding.starter.setOnClickListener {
+            startCategoryActivity(ItemType.STARTER)
         }
 
         binding.main.setOnClickListener {
-            val intent = Intent (this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.MAIN)
-            startActivity(intent)
+            startCategoryActivity(ItemType.MAIN)
         }
 
-        binding.desserts.setOnClickListener{
-            val intent = Intent ( this, CategoryActivity::class.java)
-            intent.putExtra(CATEGORY_NAME, ItemType.DESSERTS)
-            startActivity(intent)
+        binding.desserts.setOnClickListener {
+            startCategoryActivity(ItemType.DESSERTS)
         }
+
     }
-    private fun statCategoryActivity(item: ItemType) {
+
+    private fun startCategoryActivity(item: ItemType) {
         val intent = Intent(this, CategoryActivity::class.java)
         intent.putExtra(CATEGORY_NAME, item)
         startActivity(intent)
     }
 
     companion object {
-        const val CATEGORY_NAME = "categoryname"
+        const val CATEGORY_NAME = "CATEGORY_NAME"
     }
 }

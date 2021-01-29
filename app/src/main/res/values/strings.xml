@@ -10,7 +10,8 @@
     <string name="bienvenue_chez_healthy_nation">hhhhhh</string>
     <string name="string_healthy_nation" />
     <string name="tcocuicoui">Tcocuicoui</string>
-    <string name="todo">TODO</string>
-    <string name="textview">TextView</string>
+
     <string name="category">category</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
 </resources>

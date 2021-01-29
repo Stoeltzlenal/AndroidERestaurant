@@ -20,11 +20,31 @@ class Item(
     } else {
         null
     }
+
+   /* fun getIngredient():String{
+        var str:String = "Liste des ingrédients :\n"
+        ingredients.forEach(action = {
+            str += it.name + ","
+        })
+
+        //return
+    }*/
+
 }
 
 class Ingredient (@SerializedName("name_fr") val name:String){}
 
 class Price (val price:String){}
+
+class NetworkConstant {
+
+    companion object {
+        const val BASE_URL = "http://test.api.catering.bluecodegames.com/"
+        const val PATH_MENU = "menu"
+
+        const val ID_SHOP = "id_shop"
+    }
+}
 
 
 

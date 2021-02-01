@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidERestaurant"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".CategoryDetail"></activity>
-        <activity android:name=".CategoryAdapter" />
+        <activity android:name=".DetailActivity"></activity>>
         <activity android:name=".CategoryActivity" />
+        <activity android:name=".BasketActivity"></activity>
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

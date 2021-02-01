@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 
 import com.android.volley.toolbox.Volley
+import com.example.isen_2021.BaseActivity
 import com.example.isen_2021.category.CategoryAdapter
 import com.google.gson.GsonBuilder
 
@@ -36,7 +37,7 @@ enum class ItemType {
     }
 }
 
-class CategoryActivity : AppCompatActivity() {
+class CategoryActivity : BaseActivity() {
 
     private lateinit var binding: ActivityCategoryBinding
 

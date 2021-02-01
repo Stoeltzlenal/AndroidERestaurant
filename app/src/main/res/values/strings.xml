@@ -12,10 +12,13 @@
     <string name="tcocuicoui">Tcocuicoui</string>
 
     <string name="category">category</string>
-
+    <string name="basket_validation">Votre plat a bien été ajouté au panier</string>
+    <string name="basket">Panier</string>
     <string name="button">Button</string>
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
     <string name="total">total</string>
+    <string name="order">Passer commande</string>
+    <string name="quantity">Quantité :</string>
 
 </resources>

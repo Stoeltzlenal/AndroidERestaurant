@@ -44,7 +44,14 @@ class NetworkConstant {
     }
 }
 
-class Basket (val items: MutableList<BasketItem>): Serializable {
+class Basket (@SerializedName("items") val items: MutableList<BasketItem>): Serializable {
+
+    var itemsCount: Int = 0
+        get() {
+            return items
+                    .map { it.count }
+                    .reduce { acc, i -> acc + i }
+        }
 
     fun addItem(item: BasketItem) {
         val existingItem = items.firstOrNull {
@@ -77,4 +84,5 @@ class Basket (val items: MutableList<BasketItem>): Serializable {
     }
 }
 
-class BasketItem(val dish: Item, var count: Int): Serializable {}
+class BasketItem(@SerializedName("dish") val dish: Item, @SerializedName("count") var count: Int): Serializable {}
+

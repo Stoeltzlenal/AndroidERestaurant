@@ -1,13 +1,12 @@
 package fr.isen.stoeltzlen.androiderestaurant
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import com.example.isen_2021.BaseActivity
 import fr.isen.stoeltzlen.androiderestaurant.databinding.ActivityHomeBinding
 
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,8 +1,9 @@
 package fr.isen.stoeltzlen.androiderestaurant
 
+import android.content.Intent
 import fr.isen.stoeltzlen.androiderestaurant.databinding.ActivityBasketBinding
 import fr.isen.stoeltzlen.androiderestaurant.models.Basket
-
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,10 +13,17 @@ class BasketActivity : AppCompatActivity()/*, BasketCellInterface */{
     lateinit var binding: ActivityBasketBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityBasketBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         reloadData(Basket.getBasket(this))
+
+        binding.orderButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun reloadData(basket: Basket) {
@@ -28,5 +36,11 @@ class BasketActivity : AppCompatActivity()/*, BasketCellInterface */{
             reloadData(basket2)
         }
     }
+
+    /*private fun startRegisterActivity(item: ItemTypeForm) {
+        val intent = Intent(this, CategoryActivity::class.java)
+        intent.putExtra(HomeActivity.CATEGORY_NAME, item)
+        startActivity(intent)
+    }*/
 
 }

@@ -20,5 +20,9 @@
     <string name="total">total</string>
     <string name="order">Passer commande</string>
     <string name="quantity">Quantité :</string>
+    <string name="register">register</string>
+    <string name="address">Address</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
 
 </resources>

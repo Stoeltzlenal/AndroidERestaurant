@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.annotations.SerializedName
 import java.io.File
 import java.io.Serializable
+import java.net.PasswordAuthentication
 
 class MenuResult (val data: List<Category>){}
 
@@ -36,11 +37,19 @@ class Ingredient (@SerializedName("name_fr") val name:String):Serializable{}
 
 class Price (val price:String):Serializable{}
 
+//Element réseau à envoyer
 class NetworkConstant {
     companion object {
         const val BASE_URL = "http://test.api.catering.bluecodegames.com/"
+        const val PATH_REGISTER = "user/register"
+        const val PATH_LOGIN ="user/login"
         const val PATH_MENU = "menu"
         const val ID_SHOP = "id_shop"
+        const val EMAIL = "email"
+        const val PASSWORD = "password"
+        const val FIRSTNAME = "firstname"
+        const val LASTNAME = "lastname"
+
     }
 }
 

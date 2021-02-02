@@ -25,6 +25,12 @@ class HomeActivity : BaseActivity() {
             startCategoryActivity(ItemType.DESSERTS)
         }
 
+        binding.homeLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     private fun startCategoryActivity(item: ItemType) {

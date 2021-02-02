@@ -49,6 +49,8 @@ class NetworkConstant {
         const val PASSWORD = "password"
         const val FIRSTNAME = "firstname"
         const val LASTNAME = "lastname"
+        const val ID_USER = "id_user"
+        const val  MSG = "msg"
 
     }
 }
@@ -76,6 +78,10 @@ class Basket (@SerializedName("items") val items: MutableList<BasketItem>): Seri
         } ?: run {
             items.add(item)
         }
+    }
+
+    fun clear() {
+        items.clear()
     }
 
     fun save(context: Context) {

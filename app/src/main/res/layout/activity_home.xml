@@ -20,6 +20,18 @@
         />
 
     <Button
+        android:id="@+id/homeLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="connexion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945" />
+
+    <Button
         android:id="@+id/main"
         android:layout_width="263dp"
         android:layout_height="47dp"
@@ -86,6 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeToolbar"
         app:srcCompat="@drawable/i46718_recettes_healthy" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

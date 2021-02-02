@@ -36,11 +36,4 @@ class BasketActivity : AppCompatActivity()/*, BasketCellInterface */{
             reloadData(basket2)
         }
     }
-
-    /*private fun startRegisterActivity(item: ItemTypeForm) {
-        val intent = Intent(this, CategoryActivity::class.java)
-        intent.putExtra(HomeActivity.CATEGORY_NAME, item)
-        startActivity(intent)
-    }*/
-
 }

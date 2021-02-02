@@ -53,6 +53,11 @@ class NetworkConstant {
     }
 }
 
+//register result pour l'envoie
+class RegisterResult(val data: User) {}
+
+class User(val id: Int): Serializable {}
+
 class Basket (@SerializedName("items") val items: MutableList<BasketItem>): Serializable {
 
     var itemsCount: Int = 0

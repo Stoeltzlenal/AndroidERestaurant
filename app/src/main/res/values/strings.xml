@@ -24,5 +24,6 @@
     <string name="address">Address</string>
     <string name="last_name">Last name</string>
     <string name="first_name">First name</string>
+    <string name="Quantité" />
 
 </resources>

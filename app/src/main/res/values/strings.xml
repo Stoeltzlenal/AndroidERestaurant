@@ -18,12 +18,14 @@
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
     <string name="total">total</string>
-    <string name="order">Passer commande</string>
+    <string name="order">Commander</string>
     <string name="quantity">Quantité :</string>
     <string name="register">register</string>
-    <string name="address">Address</string>
-    <string name="last_name">Last name</string>
-    <string name="first_name">First name</string>
+    <string name="address">Addresse</string>
+    <string name="last_name">Nom</string>
+    <string name="first_name">Prénom</string>
+    <string name="mail">mail</string>
+    <string name="confirmmdp">Confirmation mdp</string>
     <string name="Quantité" />
 
 </resources>

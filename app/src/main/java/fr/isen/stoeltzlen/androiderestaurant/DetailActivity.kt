@@ -21,7 +21,7 @@ class DetailActivity : BaseActivity() {
         const val USER_PREFERENCES_NAME = "USER_PREFERENCES_NAME"
     }
 
-    private var itemCount = 1
+    private var itemCount = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

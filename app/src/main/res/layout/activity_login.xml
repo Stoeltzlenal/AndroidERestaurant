@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="?attr/colorOnPrimary">
 
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="185dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="186dp"
-        android:text="LOGIN"
+        android:text="CONNEXION"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,6 +33,8 @@
         android:layout_marginBottom="358dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:text="mot de passe"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +50,8 @@
         android:layout_marginBottom="33dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:text="mail"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/loginPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
